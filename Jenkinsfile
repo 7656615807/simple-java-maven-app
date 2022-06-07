@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        echo 'sdsfsdfsdf'
-        bat 'mvn -B -DskipTests clean package'
+        bat(script: 'mvn -B -DskipTests clean package', encoding: 'utf-8', label: 'dd')
       }
     }
 
